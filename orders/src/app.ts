@@ -20,7 +20,8 @@ app.use(
   cookieSession({
     //disable encryption inside the cookie, as the jwt is already encrypted
     signed: false,
-    secure: process.env.NODE_ENV !== "test", //true if https required
+    // secure: process.env.NODE_ENV !== "test", //true if https required
+    secure: false,
   })
 );
 app.use(currentUser);
